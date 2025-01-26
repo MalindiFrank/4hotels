@@ -5,11 +5,17 @@ import { authGuard } from './auth/auth.guard';
 import { NgModule } from '@angular/core';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 
-
 export const routes: Routes = [
   { path: '', component: HomepageComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  {
+    path: 'home',
+    loadComponent: () =>
+      import('./pages/welcomepage/welcomepage.component').then(
+        (m) => m.WelcomepageComponent
+      ),
+  },
   {
     path: 'rooms',
     loadComponent: () =>
