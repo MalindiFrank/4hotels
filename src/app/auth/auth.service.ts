@@ -2,6 +2,9 @@ import { Injectable } from '@angular/core';
 import {
   getAuth,
   signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+  onAuthStateChanged,
+  signOut,
   GoogleAuthProvider,
   signInWithPopup,
   UserCredential,
@@ -9,11 +12,12 @@ import {
   Auth,
   AdditionalUserInfo,
 } from 'firebase/auth';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
-export class LoginService {
+export class AuthService {
   private auth: Auth = getAuth();
   private provider: GoogleAuthProvider = new GoogleAuthProvider();
 
@@ -63,5 +67,23 @@ export class LoginService {
   //login with email and password
   loginWithEmail(email: string, password: string): Promise<any> {
     return signInWithEmailAndPassword(this.auth, email, password);
+  }
+
+  //signup with email and password
+  signup(email: string, password: string): Promise<any> {
+    return createUserWithEmailAndPassword(this.auth, email, password);
+  }
+
+  logout(): Promise<void> {
+    return signOut(this.auth);
+  }
+
+  //check user authenticated
+  checkAuthState(): Observable<boolean> {
+    return new Observable<boolean>((observer) => {
+      onAuthStateChanged(this.auth, (user) => {
+        observer.next(user !== null);
+      });
+    });
   }
 }

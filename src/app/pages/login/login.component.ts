@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AuthService } from '../../auth/auth.service';
+import { LoginService } from '../../auth/login/login.service';
 import { Router } from '@angular/router';
 import {
   FormBuilder,
@@ -25,7 +25,7 @@ export class LoginComponent {
   errorMessage: string | null = null;
 
   constructor(
-    private authService: AuthService,
+    private loginService: LoginService,
     private router: Router,
     private fb: FormBuilder
   ) {
@@ -42,7 +42,7 @@ export class LoginComponent {
   }
 
   async onLoginWithGoogle() {
-    await this.authService
+    await this.loginService
       .loginWithGoogle()
       .then(async () => {
         this.router.navigate(['/home']);
@@ -61,7 +61,7 @@ export class LoginComponent {
 
     const { email, password }: any = this.loginForm.value;
 
-    await this.authService
+    await this.loginService
       .loginWithEmail(email, password)
       .then(async () => {
         this.router.navigate(['/home']);
@@ -72,7 +72,6 @@ export class LoginComponent {
       });
   }
 
-  //navigate to signup page
   onSignup() {
     this.router.navigate(['/signup']);
   }

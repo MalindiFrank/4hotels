@@ -1,16 +1,16 @@
-import { Environment } from "../app/models/db.model";
+import { Environment } from '../app/models/db.model';
 
 export const environment: Environment = {
   production: true,
   firebaseConfig: {
-    apiKey: 'AIzaSyCMOmeS1zX6qhqIcJ5cFIVQoVV_SxUD7Lk',
-    authDomain: 'angulartodos-89870.firebaseapp.com',
-    projectId: 'angulartodos-89870',
-    storageBucket: 'angulartodos-89870.firebasestorage.app',
-    messagingSenderId: '96884917987',
-    appId: '1:96884917987:web:33be1594ef97796d11a7d6',
-    measurementId: 'G-CSR0CHLT6L',
+    apiKey: 'AIzaSyA46SkGCJWh_KZi6MPPcRg5yn1bVQ0cyyE',
+    authDomain: 'hotels-e71cd.firebaseapp.com',
     databaseURL:
-      'https://angulartodos-89870-default-rtdb.europe-west1.firebasedatabase.app/',
+      'https://hotels-e71cd-default-rtdb.europe-west1.firebasedatabase.app',
+    projectId: 'hotels-e71cd',
+    storageBucket: 'hotels-e71cd.firebasestorage.app',
+    messagingSenderId: '511670476816',
+    appId: '1:511670476816:web:f5fce97c1188f7df5a6a95',
+    measurementId: 'G-DSXNMEW75B',
   },
 };
