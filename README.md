@@ -144,6 +144,7 @@ src/
     |-- db/              // Firebase database utility services
     |-- models/          // TypeScript models (interface)
     |-- pages/           // Angular page components 
+    |-- shared/          // Shared utility modules and functions
 |-- environments/        // Environment configurations
 ```
 
