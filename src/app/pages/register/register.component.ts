@@ -29,14 +29,14 @@ export class RegisterComponent {
     username: FormControl<string | null>;
   }>;
 
-  private auth = getAuth();
-  private db = getDatabase();
+  // private auth = getAuth();
+  // private db = getDatabase();
 
   username: string | null | undefined = null;
   errorMessage: string | null = null;
 
   constructor(
-    private authService: AuthService,
+    // private authService: AuthService,
     private router: Router,
     private fb: FormBuilder
   ) {
@@ -59,26 +59,26 @@ export class RegisterComponent {
       return;
     }
 
-    const { email, password, username } = this.signupForm.value;
+    // const { email, password, username } = this.signupForm.value;
 
-    this.authService
-      .signup(email as string, password as string)
-      .then(() => {
-        console.log('Account created successfully');
+    // this.authService
+    //   .signup(email as string, password as string)
+    //   .then(() => {
+    //     console.log('Account created successfully');
 
-        onAuthStateChanged(this.auth, async (user) => {
-          set(ref(this.db, 'users/' + user?.uid), {
-            name: username?.toUpperCase(),
-            email: email,
-          });
-        });
+    //     onAuthStateChanged(this.auth, async (user) => {
+    //       set(ref(this.db, 'users/' + user?.uid), {
+    //         name: username?.toUpperCase(),
+    //         email: email,
+    //       });
+    //     });
 
-        this.router.navigate(['/home']);
-      })
-      .catch((error) => {
-        this.errorMessage = error.message;
-        console.log('Error: ', this.errorMessage);
-      });
+    //     this.router.navigate(['/home']);
+    //   })
+    //   .catch((error: any) => {
+    //     this.errorMessage = error.message;
+    //     console.log('Error: ', this.errorMessage);
+    //   });
   }
 
   onLogin() {

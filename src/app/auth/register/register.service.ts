@@ -5,11 +5,11 @@ import { getAuth, createUserWithEmailAndPassword, Auth } from 'firebase/auth';
   providedIn: 'root',
 })
 export class RegisterService {
-  private auth: Auth = getAuth();
+  // private auth: Auth = getAuth();
 
-  constructor() {}
+  // constructor() {}
 
-  signup(email: string, password: string): Promise<any> {
-    return createUserWithEmailAndPassword(this.auth, email, password);
-  }
+  // signup(email: string, password: string): Promise<any> {
+  //   return createUserWithEmailAndPassword(this.auth, email, password);
+  // }
 }

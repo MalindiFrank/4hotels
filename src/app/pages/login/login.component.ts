@@ -42,15 +42,15 @@ export class LoginComponent {
   }
 
   async onLoginWithGoogle() {
-    await this.loginService
-      .loginWithGoogle()
-      .then(async () => {
-        this.router.navigate(['/home']);
-      })
-      .catch((error) => {
-        this.errorMessage = error.message;
-        console.log('Error: ', this.errorMessage);
-      });
+    // await this.loginService
+    //   .loginWithGoogle()
+    //   .then(async () => {
+    //     this.router.navigate(['/home']);
+    //   })
+    //   .catch((error) => {
+    //     this.errorMessage = error.message;
+    //     console.log('Error: ', this.errorMessage);
+    //   });
   }
 
   //handle and validate form submission
@@ -61,18 +61,18 @@ export class LoginComponent {
 
     const { email, password }: any = this.loginForm.value;
 
-    await this.loginService
-      .loginWithEmail(email, password)
-      .then(async () => {
-        this.router.navigate(['/home']);
-      })
-      .catch((error) => {
-        this.errorMessage = error.message;
-        console.log('Error: ', this.errorMessage);
-      });
+    // await this.loginService
+    //   .loginWithEmail(email, password)
+    //   .then(async () => {
+    //     this.router.navigate(['/home']);
+    //   })
+    //   .catch((error) => {
+    //     this.errorMessage = error.message;
+    //     console.log('Error: ', this.errorMessage);
+    //   });
   }
 
   onSignup() {
-    this.router.navigate(['/signup']);
+    this.router.navigate(['/register']);
   }
 }
