@@ -139,9 +139,11 @@ ng serve
 ```
 src/
 |-- app/
-    |-- components/      // Angular components
-    |-- services/        // Firebase and utility services
-    |-- models/          // TypeScript models
+    |-- auth/            // Firebase auth utility services
+    |-- components/      // Angular standalone components
+    |-- db/              // Firebase database utility services
+    |-- models/          // TypeScript models (interface)
+    |-- pages/           // Angular page components 
 |-- environments/        // Environment configurations
 ```
 
