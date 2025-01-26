@@ -1,7 +1,7 @@
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
-import { authGuard } from './auth/auth.guard';
+import { AuthGuard } from './auth/auth.guard';
 import { NgModule } from '@angular/core';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 
@@ -46,7 +46,7 @@ export const routes: Routes = [
       import('./pages/admin/homepage/homepage.component').then(
         (m) => m.HomepageComponent
       ),
-    canActivate: [authGuard],
+    canActivate: [AuthGuard],
   },
   {
     path: 'admin/manage-rooms',
@@ -54,7 +54,7 @@ export const routes: Routes = [
       import('./pages/admin/manage-bookings/manage-bookings.component').then(
         (m) => m.ManageBookingsComponent
       ),
-    canActivate: [authGuard],
+    canActivate: [AuthGuard],
   },
   {
     path: 'admin/manage-bookings',
@@ -62,7 +62,7 @@ export const routes: Routes = [
       import('./pages/admin/manage-rooms/manage-rooms.component').then(
         (m) => m.ManageRoomsComponent
       ),
-    canActivate: [authGuard],
+    canActivate: [AuthGuard],
   },
 ];
 
