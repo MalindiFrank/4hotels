@@ -1,5 +1,20 @@
-<header>
-  <h1>Welcome to 4Hotels</h1>
-</header>
+<div class="header">
+  <header>
+    <h1 routerLink="/">Welcome to 4Hotels</h1>
+  </header>
+
+  <!-- only show if user authenticated -->
+  <div class="nav">
+    <nav>
+      <ul>
+        <li routerLink="/home">Home</li>
+        <li routerLink="/rooms">Rooms</li>
+        <li routerLink="/bookings">Bookings</li>
+        <li routerLink="/feedback">Feedback</li>
+        <li>Profile</li>
+      </ul>
+    </nav>
+  </div>
+</div>
 
 <router-outlet />

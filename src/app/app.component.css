@@ -1,3 +1,8 @@
+.header {
+  position: sticky;
+  top: 0;
+}
+
 header {
   background-color: #2e8b57;
   color: #fff;
@@ -6,7 +11,21 @@ header {
 }
 
 header h1 {
-  margin: 0;
   font-size: 2.5rem;
   color: #ffffff;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  text-align: center;
+  background: #2e8b57;
+
+  li {
+    flex: 1;
+    color: #ffffff;
+    padding-block: .5rem ;
+    border: .1rem solid #2e8b57;
+  }
 }
