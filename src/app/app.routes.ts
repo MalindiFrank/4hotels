@@ -32,6 +32,7 @@ export const routes: Routes = [
       import('./pages/booking/booking.component').then(
         (m) => m.BookingComponent
       ),
+    canActivate: [AuthGuard],
   },
   {
     path: 'bookings/:id',
