@@ -24,12 +24,19 @@ export const routes: Routes = [
   {
     path: 'rooms/:id',
     loadComponent: () =>
-      import('./pages/rooms/rooms.component').then((m) => m.RoomsComponent),
+      import('./components/room/room.component').then((m) => m.RoomComponent),
   },
   {
-    path: 'booking',
+    path: 'bookings',
     loadComponent: () =>
       import('./pages/booking/booking.component').then(
+        (m) => m.BookingComponent
+      ),
+  },
+  {
+    path: 'booking/:id',
+    loadComponent: () =>
+      import('./components/booking/booking.component').then(
         (m) => m.BookingComponent
       ),
   },

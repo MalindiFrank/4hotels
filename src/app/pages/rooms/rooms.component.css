@@ -1,0 +1,33 @@
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 4rem 2rem;
+  padding: 1rem 2rem;
+}
+
+.room {
+  width: min-content;
+  height: min-content;
+}
+
+.img {
+  width: 25svw;
+  height: 25svh;
+  background: green;
+}
+
+.info {
+  padding: .25rem 1rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+
+  button {
+    width: 44%;
+    padding: .5rem 1rem;
+  }
+}

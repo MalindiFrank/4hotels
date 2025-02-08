@@ -32,8 +32,10 @@ main {
 }
 
 .intro {
+  min-height: 40svh;
   text-align: center;
   max-width: 800px;
+  /* background: #2e8b57; */
 }
 
 .intro h2 {

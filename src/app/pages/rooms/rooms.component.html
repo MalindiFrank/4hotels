@@ -1,1 +1,33 @@
 <p>rooms works!</p>
+<div class="main">
+  <div class="room" *ngFor="let room of [1,2,3,4,5,6]">
+    <div class="img">
+      <!-- <img src="" alt="room-image" /> -->
+      image here
+    </div>
+    <div class="info">
+      <p class="title">Three Bedroom Royal Suite</p>
+      <p>2 king beds and 2 twin beds</p>
+      <p>6 adults, or 4 adults and 2 children</p>
+    </div>
+    <div class="buttons">
+      <button class="details" routerLink="/rooms/5">Details</button>
+      <button class="book" routerLink="/bookings/5">Book Room</button>
+    </div>
+  </div>
+  <!-- duplicates -->
+
+<!-- // example -->
+ <!-- <div class="container">
+  <div *ngFor="let product of products" class="product">
+    <div (click)="goToProductDetails(product.id)" class="product">
+      <img [src]="product.image" />
+      <p>{{ product.title }}</p>
+      <p>R {{ product.price }}</p>
+    </div>
+    <div class="button">
+      <span>❤️ {{ product.rating.rate }}</span>
+      <button (click)="deleleProduct(product.id)">Delete</button>
+    </div>
+  </div>
+</div> -->
