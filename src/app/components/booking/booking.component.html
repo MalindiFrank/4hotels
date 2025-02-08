@@ -1,1 +1,126 @@
 <p>booking room works!</p>
+
+<form>
+  <div>
+    <label for="title">Product title:</label>
+    <input id="title" type="text" value="Deluxe Standard" disabled />
+  </div>
+  <div>
+    <label for="title">Price: </label>
+    <input id="title" type="text" value="R5 400" disabled />
+  </div>
+  <div>
+    <label for="title">Check In Date: </label>
+    <input type="datetime-local" name="" id="" />
+  </div>
+  <div>
+    <label for="title">Check Out Date: </label>
+    <input type="datetime-local" name="" id="" />
+  </div>
+
+  <div>
+    <label>Fullname: </label>
+    <input type="text" />
+  </div>
+
+  <div>
+    <label>Email: </label>
+    <input type="text" />
+  </div>
+
+  <div>
+    <label>Phone: </label>
+    <input type="number" />
+  </div>
+
+  <div class="submit">
+    <button>Confirm Book</button>
+  </div>
+
+</form>
+
+<!-- {
+  "userId": "userId1",
+  "roomId": "roomId1",
+  "checkInDate": "2025-01-26",
+  "checkOutDate": "2025-01-28",
+  "totalPrice": 300,
+  "status": "confirmed",
+  "paymentStatus": "paid"
+}  -->
+
+<!-- examlpe -->
+
+<!-- <div class="container">
+  <form [formGroup]="addProductForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="title">Product title:</label>
+      <input id="title" formControlName="title" type="text" />
+      <div *ngIf="f.title.touched && f.title.invalid">
+        <small *ngIf="f.title.errors?.['required']"
+          >Your product must have a title, it's required</small
+        >
+      </div>
+    </div>
+
+    <div>
+      <label for="price">Product price:</label>
+      <input id="price" formControlName="price" type="number" />
+      <div *ngIf="f.price.touched && f.price.invalid">
+        <small *ngIf="f.price.errors?.['required']"
+          >Your product must have a price, nothing is for free</small
+        >
+      </div>
+    </div>
+
+    <div>
+      <label for="description">Product description:</label>
+      <textarea
+        id="description"
+        formControlName="description"
+        type="text"
+        cols="30"
+        rows="10"
+      ></textarea>
+      <div *ngIf="f.description.touched && f.description.invalid">
+        <small *ngIf="f.description.errors?.['required']"
+          >Description for the product is required</small
+        >
+      </div>
+    </div>
+
+    <div>
+      <label for="image">Image Url:</label>
+      <input id="image" formControlName="image" type="text" />
+      <div *ngIf="f.image.touched && f.image.invalid">
+        <small *ngIf="f.image.errors?.['required']"
+          >An image url is required</small
+        >
+      </div>
+    </div>
+
+    <div>
+      <label for="category">Product Category:</label>
+      <input id="category" formControlName="category" type="text" />
+      <div *ngIf="f.category.touched && f.category.invalid">
+        <small *ngIf="f.category.errors?.['required']"
+          >Product must have a category</small
+        >
+      </div>
+    </div>
+    
+    <div *ngIf="isPopUp" class="pop-up-msg">
+      {{ popUpMsg }}
+    </div>
+
+    <button type="submit" [disabled]="addProductForm.invalid">
+      Add Product
+    </button>
+
+    <div *ngIf="errorMessage">{{ errorMessage }}</div>
+  </form>
+
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+</div> -->
