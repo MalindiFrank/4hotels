@@ -1,1 +1,48 @@
 <p>feedback form works!</p>
+
+<div class="main">
+  <div class="roomInfo">
+    <p>Deluxe Standard</p>
+    <p>Room description...</p>
+  </div>
+  <form [formGroup]="roomFeedbackForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="rating">Rating:</label>
+      <input id="rating" formControlName="rating" type="range" />
+      <div *ngIf="f.rating.touched && f.rating.invalid">
+        <small *ngIf="f.rating.errors?.['required']"
+          >Room rating is required</small
+        >
+      </div>
+    </div>
+
+    <div>
+      <label for="comment">Comment:</label>
+      <textarea
+        id="comment"
+        formControlName="comment"
+        cols="30"
+        rows="7"
+      ></textarea>
+      <div *ngIf="f.comment.touched && f.comment.invalid">
+        <small *ngIf="f.comment.errors?.['required']"
+          >Please provide comments for your rating</small
+        >
+      </div>
+    </div>
+
+    <div *ngIf="isPopUp" class="pop-up-msg">
+      {{ popUpMsg }}
+    </div>
+
+    <button type="submit" [disabled]="roomFeedbackForm.invalid">
+      Submit Feedback
+    </button>
+
+    <div *ngIf="errorMessage">{{ errorMessage }}</div>
+  </form>
+
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+</div>

@@ -29,7 +29,7 @@ export const routes: Routes = [
   {
     path: 'bookings',
     loadComponent: () =>
-      import('./pages/booking/booking.component').then(
+      import('./pages/bookings/bookings.component').then(
         (m) => m.BookingComponent
       ),
     canActivate: [AuthGuard],
