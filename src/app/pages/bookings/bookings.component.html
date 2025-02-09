@@ -1,0 +1,26 @@
+<p>All bookings page works!</p>
+
+<div class="room" *ngFor="let room of [1,2,3,4,5,6]">
+    <div class="info">
+      <p class="title">Three Bedroom Royal Suite</p>
+      <p>6 adults, or 4 adults and 2 children</p>
+      <p>Check In Date: 12 Jan 2021 - 12:00</p>
+      <p>Check Out Date: 12 Jan 2021 - 12:00</p>
+      <p>Status: confirmed / Cancelled</p>
+      <p>Total Price: R 6 500</p>
+      <p>Payment Status: Paid / Pending</p>
+    </div>
+    <div class="buttons">
+      <button class="details" routerLink="/rooms/5">View Room</button>
+      <button class="book" >Cancel Booking</button>
+    </div>
+    <div class="feedback">
+      <button (click)="toggleFeedback()" >Give Feedback</button>
+      <div *ngIf="isActive">
+        <app-form />
+      </div>
+      <!-- toggle feedback form -->
+       <!-- use case not sure, ngif or summary dropdown...  -->
+    </div>
+  </div>
+
