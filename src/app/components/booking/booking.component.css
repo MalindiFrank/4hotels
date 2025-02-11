@@ -1,0 +1,138 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Main Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Room Details */
+.room-details {
+  padding: 20px;
+  background-color: #ecf0f1;
+  border-radius: 10px;
+}
+
+.room-details p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.room-details p:first-child {
+  font-weight: bold;
+  color: #27ae60; /* Green for price */
+}
+
+.room-details p:nth-child(2) {
+  color: #2980b9; /* Blue for room type */
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="datetime-local"] {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  background-color: #fafafa;
+  transition: border-color 0.3s ease;
+}
+
+input[type="datetime-local"]:focus {
+  border-color: #3498db; /* Blue border on focus */
+  outline: none;
+}
+
+small {
+  color: #e74c3c;
+  font-size: 0.9rem;
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #2980b9; /* Darker blue on hover */
+}
+
+/* Pop-up Message */
+.pop-up-msg {
+  padding: 15px;
+  background-color: #27ae60;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 1.1rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  .room-details {
+    padding: 15px;
+  }
+
+  input[type="datetime-local"] {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  button {
+    padding: 10px 18px;
+    font-size: 1rem;
+  }
+}

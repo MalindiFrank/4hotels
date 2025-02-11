@@ -1,0 +1,65 @@
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #2980b9;
+}
+
+.small {
+  color: #e74c3c;
+  font-size: 0.9rem;
+}
+
+/* Pop-up Message */
+.pop-up-msg {
+  padding: 15px;
+  background-color: #27ae60;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* Error Message */
+.error-message {
+  color: #e74c3c;
+  font-size: 1.1rem;
+  text-align: center;
+  font-weight: bold;
+}

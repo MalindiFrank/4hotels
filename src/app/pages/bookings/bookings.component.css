@@ -1,0 +1,150 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Main Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Room Card Layout */
+.room {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.room:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.info {
+  padding: 15px;
+  background-color: #ecf0f1;
+  border-radius: 8px;
+}
+
+.info p {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.info .title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #2980b9; /* Blue for room name */
+}
+
+.info p:nth-child(2) {
+  font-size: 1.1rem;
+  color: #27ae60; /* Green for capacity */
+}
+
+.info p:nth-child(3),
+.info p:nth-child(4),
+.info p:nth-child(5),
+.info p:nth-child(6) {
+  color: #7f8c8d; /* Gray text for other details */
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.buttons .details {
+  background-color: #3498db;
+  color: white;
+}
+
+.buttons .details:hover {
+  background-color: #2980b9;
+}
+
+.buttons .book {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.buttons .book:hover {
+  background-color: #c0392b;
+}
+
+.feedback {
+  margin-top: 20px;
+}
+
+.feedback button {
+  background-color: #27ae60;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.feedback button:hover {
+  background-color: #2ecc71;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .room {
+    flex-direction: column;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .room {
+    padding: 15px;
+  }
+
+  .buttons button {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+  }
+
+  .feedback button {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+
+  .app-form input,
+  .app-form textarea {
+    font-size: 0.95rem;
+  }
+}

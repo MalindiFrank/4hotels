@@ -1,0 +1,103 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2980b9;
+  margin-bottom: 20px;
+}
+
+div {
+  margin-bottom: 20px;
+}
+
+/* Welcome Section */
+div:first-of-type {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #7f8c8d; /* Soft gray for profile info text */
+}
+
+/* Feedback Display Section */
+div:nth-of-type(2) {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+div:nth-of-type(2) h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2980b9;
+  margin-bottom: 20px;
+}
+
+app-display {
+  display: block;
+  margin-top: 15px;
+}
+
+/* Feedback Form Section */
+div:nth-of-type(3) {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+div:nth-of-type(3) h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #3498db;
+  margin-bottom: 20px;
+}
+
+app-form {
+  display: block;
+  margin-top: 15px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  div {
+    padding: 15px;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  app-display, app-form {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  div:first-of-type {
+    font-size: 1rem;
+  }
+
+  div:nth-of-type(2) h4, div:nth-of-type(3) h4 {
+    font-size: 1.2rem;
+  }
+
+  app-form input, app-form textarea, app-display {
+    font-size: 0.95rem;
+  }
+}
