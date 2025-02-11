@@ -7,6 +7,18 @@ body {
   line-height: 1.6;
 }
 
+.main,
+.submain {
+  display: flex;
+  height: 100svh;
+}
+
+.feedbacks,
+.feedbacks-form {
+  overflow-y: scroll;
+  width: 100%;
+}
+
 h3 {
   font-size: 1.8rem;
   font-weight: bold;
