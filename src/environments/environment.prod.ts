@@ -3,14 +3,13 @@ import { Environment } from '../app/models/db.model';
 export const environment: Environment = {
   production: true,
   firebaseConfig: {
-    apiKey: 'AIzaSyA46SkGCJWh_KZi6MPPcRg5yn1bVQ0cyyE',
-    authDomain: 'hotels-e71cd.firebaseapp.com',
-    databaseURL:
-      'https://hotels-e71cd-default-rtdb.europe-west1.firebasedatabase.app',
-    projectId: 'hotels-e71cd',
-    storageBucket: 'hotels-e71cd.firebasestorage.app',
-    messagingSenderId: '511670476816',
-    appId: '1:511670476816:web:f5fce97c1188f7df5a6a95',
-    measurementId: 'G-DSXNMEW75B',
+    apiKey: "AIzaSyAHnFBuZECqYjyt1EIZBSvh0FD2IPpAcfA",
+    authDomain: "hotels-44.firebaseapp.com",
+    databaseURL: "https://hotels-44-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "hotels-44",
+    storageBucket: "hotels-44.firebasestorage.app",
+    messagingSenderId: "51685347571",
+    appId: "1:51685347571:web:133633ede9492a1950e786",
+    measurementId: "G-EX03V7CGMQ"
   },
 };
